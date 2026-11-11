@@ -1,0 +1,45 @@
+.resume__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.resume__intro {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.resume__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.resume__gap {
+  margin-top: 64px;
+}
+
+/* Вақт чизиғидаги сарлавҳа ва матн оралиғи */
+.resume__head ~ .timeline .timeline__item h3 {
+  margin: 4px 0 6px;
+}
+
+.resume__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.resume__grid .card p {
+  margin-top: 8px;
+}
+
+.resume__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

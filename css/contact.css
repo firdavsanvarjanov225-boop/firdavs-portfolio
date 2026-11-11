@@ -1,0 +1,94 @@
+.contact__intro {
+  margin-top: 16px;
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.contact__layout {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Контакт маълумотлари */
+.contact__list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact__list a {
+  transition: var(--transition);
+}
+
+.contact__list a:hover {
+  color: var(--accent);
+}
+
+/* Форма */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form:hover,
+.contact__info:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form__group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form__group input,
+.form__group textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface-alt);
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  padding: 12px 14px;
+  transition: var(--transition);
+  resize: vertical;
+}
+
+.form__group input::placeholder,
+.form__group textarea::placeholder {
+  color: var(--muted);
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212, 232, 90, 0.15);
+}
+
+.form .btn {
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .contact__layout {
+    grid-template-columns: 1fr;
+  }
+}

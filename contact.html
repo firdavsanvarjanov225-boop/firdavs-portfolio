@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Firdavs Anvarjanov" />
+  <title>Contact | Firdavs Anvarjanov</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Firdavs<span>.</span></a>
+
+      <button class="burger" id="burger" aria-label="Open menu">☰</button>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="projects.html" class="nav__link">Projects</a></li>
+          <li><a href="resume.html" class="nav__link">Resume</a></li>
+          <li><a href="contact.html" class="nav__link active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Contact<span class="text-accent">.</span></h1>
+        <p class="contact__intro">
+          Have a project or a question? Send me a message and I will reply as soon as possible.
+        </p>
+
+        <div class="contact__layout">
+
+          <!-- Contact info -->
+          <aside class="card contact__info">
+            <h3>Get in touch</h3>
+            <ul class="contact__list">
+              <li>
+                <span class="text-muted">Telegram</span>
+                <a href="https://t.me/" target="_blank" rel="noopener">@username</a>
+              </li>
+              <li>
+                <span class="text-muted">Email</span>
+                <a href="mailto:example@email.com">example@email.com</a>
+              </li>
+              <li>
+                <span class="text-muted">GitHub</span>
+                <a href="https://github.com/" target="_blank" rel="noopener">github.com/username</a>
+              </li>
+            </ul>
+          </aside>
+
+          <!-- Form -->
+          <form class="card form" id="contact-form" novalidate>
+            <div class="form__group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" />
+            </div>
+
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="form__group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What is it about?" />
+            </div>
+
+            <div class="form__group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="text-muted">© 2026 Firdavs Anvarjanov</p>
+      <div class="footer__links">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+</body>
+</html>
