@@ -1,0 +1,57 @@
+.projects__intro {
+  margin-top: 16px;
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* ===== Projects grid ===== */
+.projects-list {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+/* ===== Project card ===== */
+.project {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project__image {
+  aspect-ratio: 16 / 9;
+  background: var(--surface-alt);
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project__links {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.project__links .btn {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
