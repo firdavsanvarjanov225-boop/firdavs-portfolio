@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="About Firdavs Anvarjanov" />
-  <title>About | Firdavs Anvarjanov</title>
+  <title data-i18n="title.about">About | Firdavs Anvarjanov</title>
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -17,31 +17,37 @@
     <div class="container header__inner">
       <a href="index.html" class="logo">Firdavs<span>.</span></a>
 
-      <button class="burger" id="burger" aria-label="Open menu">☰</button>
-
       <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Home</a></li>
-          <li><a href="about.html" class="nav__link active">About</a></li>
-          <li><a href="projects.html" class="nav__link">Projects</a></li>
-          <li><a href="resume.html" class="nav__link">Resume</a></li>
-          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li><a href="index.html" class="nav__link" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" class="nav__link" data-i18n="nav.about">About</a></li>
+          <li><a href="projects.html" class="nav__link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="resume.html" class="nav__link" data-i18n="nav.resume">Resume</a></li>
+          <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
+
+      <div class="lang" id="lang-switcher">
+        <button type="button" class="lang__btn" data-lang="en">EN</button>
+        <button type="button" class="lang__btn" data-lang="ru">RU</button>
+        <button type="button" class="lang__btn" data-lang="uz">UZ</button>
+        <button type="button" class="lang__btn" data-lang="ky">KY</button>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Open menu">☰</button>
     </div>
   </header>
 
   <main>
-    <!-- Intro -->
     <section class="section">
       <div class="container about__intro">
         <div>
-          <h1>About me<span class="text-accent">.</span></h1>
-          <p class="about__text">
+          <h1><span data-i18n="about.title">About me</span><span class="text-accent">.</span></h1>
+          <p class="about__text" data-i18n="about.p1">
             I am a frontend developer who enjoys turning ideas into clean and
             responsive websites. Write a few sentences about yourself here.
           </p>
-          <p class="about__text">
+          <p class="about__text" data-i18n="about.p2">
             I am learning and building with HTML, CSS and JavaScript, and I
             want to grow into a professional developer.
           </p>
@@ -51,49 +57,47 @@
       </div>
     </section>
 
-    <!-- Skills -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title" data-i18n="skills.title">Skills</h2>
 
         <div class="skills-grid">
           <article class="card">
             <h3>HTML5</h3>
-            <p class="text-muted">Semantic structure of web pages.</p>
+            <p class="text-muted" data-i18n="about.s1.desc">Semantic structure of web pages.</p>
           </article>
           <article class="card">
             <h3>CSS3</h3>
-            <p class="text-muted">Layout, animation and responsive design.</p>
+            <p class="text-muted" data-i18n="about.s2.desc">Layout, animation and responsive design.</p>
           </article>
           <article class="card">
             <h3>JavaScript</h3>
-            <p class="text-muted">Interactivity and page logic.</p>
+            <p class="text-muted" data-i18n="about.s3.desc">Interactivity and page logic.</p>
           </article>
           <article class="card">
             <h3>Git &amp; Git Bash</h3>
-            <p class="text-muted">Version control and terminal work.</p>
+            <p class="text-muted" data-i18n="about.s4.desc">Version control and terminal work.</p>
           </article>
           <article class="card">
             <h3>Vercel</h3>
-            <p class="text-muted">Deploying websites online.</p>
+            <p class="text-muted" data-i18n="about.s5.desc">Deploying websites online.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Journey -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">My Journey</h2>
+        <h2 class="section-title" data-i18n="about.journey">My Journey</h2>
 
         <ul class="timeline">
           <li class="timeline__item">
             <span class="timeline__year">2026</span>
-            <p>Started building my personal portfolio with HTML, CSS and JavaScript.</p>
+            <p data-i18n="about.j1.text">Started building my personal portfolio with HTML, CSS and JavaScript.</p>
           </li>
           <li class="timeline__item">
-            <span class="timeline__year">Year</span>
-            <p>Add your next milestone here.</p>
+            <span class="timeline__year" data-i18n="about.j2.year">Year</span>
+            <p data-i18n="about.j2.text">Add your next milestone here.</p>
           </li>
         </ul>
       </div>
@@ -113,5 +117,10 @@
   <script src="js/navigation.js"></script>
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
+  <script src="js/translations/en.js"></script>
+  <script src="js/translations/ru.js"></script>
+  <script src="js/translations/uz.js"></script>
+  <script src="js/translations/ky.js"></script>
+  <script src="js/language.js"></script>
 </body>
 </html>

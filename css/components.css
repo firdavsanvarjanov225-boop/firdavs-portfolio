@@ -159,3 +159,38 @@
 .header.scrolled {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
+/* ===== Language switcher ===== */
+.nav {
+  margin-left: auto;
+}
+
+.lang {
+  display: flex;
+  gap: 4px;
+  margin-left: 16px;
+  padding: 4px;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-pill);
+}
+
+.lang__btn {
+  background: none;
+  border: 0;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang__btn:hover {
+  color: var(--text);
+}
+
+.lang__btn.active {
+  background: var(--accent);
+  color: var(--bg);
+}

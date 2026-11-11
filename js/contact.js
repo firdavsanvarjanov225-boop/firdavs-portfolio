@@ -1,33 +1,18 @@
 const form = document.getElementById("contact-form");
 
 if (form) {
+  const t = (key) => (window.t ? window.t(key) : key);
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Ҳар бир майдон учун қоида ва хато матни
+  // Ҳар бир майдон учун қоида ва таржима калити
   const rules = [
-    {
-      id: "name",
-      isValid: (value) => value.trim().length >= 2,
-      message: "Please enter your full name (at least 2 characters).",
-    },
-    {
-      id: "email",
-      isValid: (value) => emailPattern.test(value.trim()),
-      message: "Please enter a valid email address.",
-    },
-    {
-      id: "subject",
-      isValid: (value) => value.trim().length >= 3,
-      message: "Please enter a subject (at least 3 characters).",
-    },
-    {
-      id: "message",
-      isValid: (value) => value.trim().length >= 10,
-      message: "Message must be at least 10 characters long.",
-    },
+    { id: "name", isValid: (v) => v.trim().length >= 2, message: "form.err.name" },
+    { id: "email", isValid: (v) => emailPattern.test(v.trim()), message: "form.err.email" },
+    { id: "subject", isValid: (v) => v.trim().length >= 3, message: "form.err.subject" },
+    { id: "message", isValid: (v) => v.trim().length >= 10, message: "form.err.message" },
   ];
 
-  const showError = (input, message) => {
+  const showError = (input, messageKey) => {
     const group = input.closest(".form__group");
     let error = group.querySelector(".form__error");
 
@@ -37,7 +22,7 @@ if (form) {
       group.appendChild(error);
     }
 
-    error.textContent = message;
+    error.textContent = t(messageKey);
     input.classList.add("invalid");
   };
 
@@ -49,10 +34,14 @@ if (form) {
     input.classList.remove("invalid");
   };
 
-  // Статус хабари учун жой
   const status = document.createElement("p");
   status.className = "form__status";
   form.appendChild(status);
+
+  const clearAll = () => {
+    rules.forEach((rule) => clearError(document.getElementById(rule.id)));
+    status.textContent = "";
+  };
 
   // Ёзиш давомида хатони ўчириш
   rules.forEach((rule) => {
@@ -62,6 +51,9 @@ if (form) {
       status.textContent = "";
     });
   });
+
+  // Тил алмашганда эски тилдаги хабарларни тозалаш
+  document.addEventListener("languagechange", clearAll);
 
   // Юборишда текшириш
   form.addEventListener("submit", (event) => {
@@ -85,7 +77,7 @@ if (form) {
       return;
     }
 
-    // Telegram'га юбориш 8-босқичда қўшилади
+    // Telegram'га юбориш 8B босқичда қўшилади
     const data = {
       name: form.elements["name"].value.trim(),
       email: form.elements["email"].value.trim(),
@@ -94,6 +86,6 @@ if (form) {
     };
 
     console.log("Form data:", data);
-    status.textContent = "Form is valid. Sending will be added in the next step.";
+    status.textContent = t("form.ok");
   });
 }

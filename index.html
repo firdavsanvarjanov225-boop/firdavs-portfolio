@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Firdavs Anvarjanov — Frontend Developer portfolio" />
-  <title>Firdavs Anvarjanov | Frontend Developer</title>
+  <title data-i18n="title.home">Firdavs Anvarjanov | Frontend Developer</title>
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -17,32 +17,39 @@
     <div class="container header__inner">
       <a href="index.html" class="logo">Firdavs<span>.</span></a>
 
-      <button class="burger" id="burger" aria-label="Open menu">☰</button>
-
       <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li><a href="index.html" class="nav__link active">Home</a></li>
-          <li><a href="about.html" class="nav__link">About</a></li>
-          <li><a href="projects.html" class="nav__link">Projects</a></li>
-          <li><a href="resume.html" class="nav__link">Resume</a></li>
-          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li><a href="index.html" class="nav__link" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" class="nav__link" data-i18n="nav.about">About</a></li>
+          <li><a href="projects.html" class="nav__link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="resume.html" class="nav__link" data-i18n="nav.resume">Resume</a></li>
+          <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
+
+      <div class="lang" id="lang-switcher">
+        <button type="button" class="lang__btn" data-lang="en">EN</button>
+        <button type="button" class="lang__btn" data-lang="ru">RU</button>
+        <button type="button" class="lang__btn" data-lang="uz">UZ</button>
+        <button type="button" class="lang__btn" data-lang="ky">KY</button>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Open menu">☰</button>
     </div>
   </header>
-      <main>
-    <!-- Hero -->
+
+  <main>
     <section class="hero section">
       <div class="container hero__inner">
-        <p class="hero__label">Frontend Developer</p>
-        <h1>Hi, I'm Firdavs<span class="text-accent">.</span></h1>
-        <p class="hero__text">
+        <p class="hero__label" data-i18n="home.label">Frontend Developer</p>
+        <h1><span data-i18n="home.title">Hi, I'm Firdavs</span><span class="text-accent">.</span></h1>
+        <p class="hero__text" data-i18n="home.text">
           I build clean, fast and responsive websites using HTML, CSS and JavaScript.
         </p>
 
         <div class="hero__buttons">
-          <a href="projects.html" class="btn btn--primary">View Projects</a>
-          <a href="contact.html" class="btn btn--outline">Contact Me</a>
+          <a href="projects.html" class="btn btn--primary" data-i18n="home.btnProjects">View Projects</a>
+          <a href="contact.html" class="btn btn--outline" data-i18n="home.btnContact">Contact Me</a>
         </div>
 
         <ul class="hero__tags">
@@ -54,29 +61,29 @@
       </div>
     </section>
 
-    <!-- Featured projects -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title" data-i18n="home.featured">Featured Projects</h2>
 
         <div class="projects-grid">
           <article class="card">
-            <h3>Project One</h3>
-            <p class="text-muted">Short description of the first project.</p>
+            <h3 data-i18n="proj.1.title">Personal Portfolio</h3>
+            <p class="text-muted" data-i18n="proj.1.desc">My personal website with five pages and a four-language interface.</p>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="proj.2.title">Project Two</h3>
+            <p class="text-muted" data-i18n="proj.2.desc">Write a short description of your second project here.</p>
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
           </article>
 
           <article class="card">
-            <h3>Project Two</h3>
-            <p class="text-muted">Short description of the second project.</p>
-            <span class="tag">JavaScript</span>
-          </article>
-
-          <article class="card">
-            <h3>Project Three</h3>
-            <p class="text-muted">Short description of the third project.</p>
-            <span class="tag">HTML</span>
+            <h3 data-i18n="proj.3.title">Project Three</h3>
+            <p class="text-muted" data-i18n="proj.3.desc">Write a short description of your third project here.</p>
             <span class="tag">JavaScript</span>
           </article>
         </div>
@@ -94,8 +101,13 @@
     </div>
   </footer>
 
-    <script src="js/navigation.js"></script>
+  <script src="js/navigation.js"></script>
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
+  <script src="js/translations/en.js"></script>
+  <script src="js/translations/ru.js"></script>
+  <script src="js/translations/uz.js"></script>
+  <script src="js/translations/ky.js"></script>
+  <script src="js/language.js"></script>
 </body>
 </html>
