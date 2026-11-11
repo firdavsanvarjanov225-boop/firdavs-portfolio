@@ -92,3 +92,18 @@
     grid-template-columns: 1fr;
   }
 }
+/* ===== Form validation ===== */
+.form__error {
+  color: #ff8a7a;
+  font-size: 0.85rem;
+}
+
+.form__group input.invalid,
+.form__group textarea.invalid {
+  border-color: #ff8a7a;
+}
+
+.form__status {
+  color: var(--accent);
+  font-weight: 600;
+}
