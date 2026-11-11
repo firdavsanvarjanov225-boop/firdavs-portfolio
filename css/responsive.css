@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--surface);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav.open {
+    max-height: 360px;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    padding: 16px 20px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,145 @@
+/* ===== Header ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-h);
+  background: rgba(15, 31, 23, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--surface);
+}
+
+.header__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav__list {
+  display: flex;
+  gap: 8px;
+}
+
+.nav__link {
+  display: block;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  color: var(--muted);
+  transition: var(--transition);
+}
+
+.nav__link:hover,
+.nav__link.active {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.nav__link.active {
+  color: var(--accent);
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--text);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 232, 90, 0.25);
+}
+
+.btn--outline {
+  border-color: var(--primary);
+  color: var(--text);
+  background: transparent;
+}
+
+.btn--outline:hover {
+  background: var(--primary);
+}
+
+/* ===== Card ===== */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+/* ===== Tag ===== */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-alt);
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--surface);
+  border-top: 1px solid var(--primary);
+  padding: 32px 0;
+  margin-top: 60px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__links a {
+  color: var(--muted);
+  transition: var(--transition);
+}
+
+.footer__links a:hover {
+  color: var(--accent);
+}
