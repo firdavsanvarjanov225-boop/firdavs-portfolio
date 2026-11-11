@@ -1,0 +1,75 @@
+/* ===== Intro ===== */
+.about__intro {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about__text {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+.about__photo {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  border: 1px solid var(--primary);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+/* ===== Skills ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.skills-grid .card p {
+  margin-top: 8px;
+}
+
+/* ===== Timeline ===== */
+.timeline {
+  border-left: 2px solid var(--primary);
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.timeline__item {
+  position: relative;
+}
+
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline__year {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .about__intro {
+    grid-template-columns: 1fr;
+  }
+
+  .about__photo {
+    max-width: 240px;
+  }
+}
