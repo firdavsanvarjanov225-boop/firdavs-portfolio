@@ -39,3 +39,17 @@
     margin-right: 12px;
   }
 }
+@media (max-width: 400px) {
+  .lang {
+    margin-right: 8px;
+  }
+
+  .lang__btn {
+    padding: 4px 7px;
+    font-size: 0.75rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
