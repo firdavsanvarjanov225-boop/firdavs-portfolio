@@ -77,5 +77,8 @@ window.translations.uz = {
   "form.err.email": "To'g'ri email manzilini kiriting.",
   "form.err.subject": "Mavzuni kiriting (kamida 3 ta belgi).",
   "form.err.message": "Xabar kamida 10 ta belgidan iborat bo'lishi kerak.",
-  "form.ok": "Forma to'g'ri to'ldirildi. Yuborish keyingi bosqichda qo'shiladi."
+  "form.ok": "Forma to'g'ri to'ldirildi. Yuborish keyingi bosqichda qo'shiladi.",
+   "form.sending": "Yuborilmoqda...",
+  "form.success": "Rahmat! Xabaringiz yuborildi.",
+  "form.fail": "Nimadir xato ketdi. Keyinroq qayta urinib ko'ring yoki Telegram orqali yozing." 
 };

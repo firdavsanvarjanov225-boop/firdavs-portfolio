@@ -107,3 +107,28 @@
   color: var(--accent);
   font-weight: 600;
 }
+/* ===== Honeypot (одамга кўринмайди) ===== */
+.form__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ===== Send status ===== */
+.form__status--error {
+  color: #ff8a7a;
+}
+
+.form__status--info {
+  color: var(--muted);
+}
+
+.form .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

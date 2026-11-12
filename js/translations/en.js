@@ -77,5 +77,8 @@ window.translations.en = {
   "form.err.email": "Please enter a valid email address.",
   "form.err.subject": "Please enter a subject (at least 3 characters).",
   "form.err.message": "Message must be at least 10 characters long.",
-  "form.ok": "Form is valid. Sending will be added in the next step."
+  "form.ok": "Form is valid. Sending will be added in the next step.",
+   "form.sending": "Sending...",
+  "form.success": "Thank you! Your message has been sent.",
+  "form.fail": "Something went wrong. Please try again later or contact me on Telegram."
 };

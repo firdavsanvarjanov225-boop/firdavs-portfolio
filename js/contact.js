@@ -2,15 +2,18 @@ const form = document.getElementById("contact-form");
 
 if (form) {
   const t = (key) => (window.t ? window.t(key) : key);
+  const API_URL = "/api/contact";
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Ҳар бир майдон учун қоида ва таржима калити
   const rules = [
     { id: "name", isValid: (v) => v.trim().length >= 2, message: "form.err.name" },
     { id: "email", isValid: (v) => emailPattern.test(v.trim()), message: "form.err.email" },
     { id: "subject", isValid: (v) => v.trim().length >= 3, message: "form.err.subject" },
     { id: "message", isValid: (v) => v.trim().length >= 10, message: "form.err.message" },
   ];
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  let isSending = false;
 
   const showError = (input, messageKey) => {
     const group = input.closest(".form__group");
@@ -34,13 +37,20 @@ if (form) {
     input.classList.remove("invalid");
   };
 
+  // Юбориш натижаси учун хабар жойи
   const status = document.createElement("p");
   status.className = "form__status";
+  status.setAttribute("role", "status");
   form.appendChild(status);
+
+  const setStatus = (key, type) => {
+    status.textContent = key ? t(key) : "";
+    status.className = "form__status" + (type ? " form__status--" + type : "");
+  };
 
   const clearAll = () => {
     rules.forEach((rule) => clearError(document.getElementById(rule.id)));
-    status.textContent = "";
+    setStatus("");
   };
 
   // Ёзиш давомида хатони ўчириш
@@ -48,17 +58,19 @@ if (form) {
     const input = document.getElementById(rule.id);
     input.addEventListener("input", () => {
       clearError(input);
-      status.textContent = "";
+      setStatus("");
     });
   });
 
   // Тил алмашганда эски тилдаги хабарларни тозалаш
   document.addEventListener("languagechange", clearAll);
 
-  // Юборишда текшириш
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
+    if (isSending) return;
+
+    // 1) Браузерда текшириш
     let formIsValid = true;
 
     rules.forEach((rule) => {
@@ -73,19 +85,43 @@ if (form) {
     });
 
     if (!formIsValid) {
-      status.textContent = "";
+      setStatus("");
       return;
     }
 
-    // Telegram'га юбориш 8B босқичда қўшилади
+    // 2) Маълумотни йиғиш
     const data = {
       name: form.elements["name"].value.trim(),
       email: form.elements["email"].value.trim(),
       subject: form.elements["subject"].value.trim(),
       message: form.elements["message"].value.trim(),
+      website: form.elements["website"]?.value || "",
     };
 
-    console.log("Form data:", data);
-    status.textContent = t("form.ok");
+    // 3) Серверга юбориш
+    isSending = true;
+    submitBtn.disabled = true;
+    setStatus("form.sending", "info");
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed with status " + response.status);
+      }
+
+      form.reset();
+      setStatus("form.success", "success");
+    } catch (error) {
+      console.error(error);
+      setStatus("form.fail", "error");
+    } finally {
+      isSending = false;
+      submitBtn.disabled = false;
+    }
   });
 }
