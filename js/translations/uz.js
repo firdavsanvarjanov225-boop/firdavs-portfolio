@@ -32,8 +32,8 @@ window.translations.uz = {
   "projects.demo": "Jonli demo",
 
   "about.title": "Men haqimda",
-  "about.p1": "Men g'oyalarni toza va moslashuvchan saytlarga aylantirishni yoqtiradigan frontend dasturchiman. Bu yerga o'zingiz haqingizda bir necha jumla yozing.",
-  "about.p2": "Men HTML, CSS va JavaScript bilan o'rganaman va loyihalar yarataman, professional dasturchi bo'lishni xohlayman.",
+  "about.p1": "Men Bishkekdagi I. Arabayev nomidagi Qirg'iz davlat universitetida «Dasturiy injiniring» yo'nalishida o'qiyman va frontend dasturlashni o'rganaman. G'oyalarni toza va moslashuvchan saytlarga aylantirishni yoqtiraman.",
+  "about.p2": "Men HTML, CSS va JavaScript yordamida loyihalar yarataman va professional dasturchi bo'lishni xohlayman.",
   "about.s1.desc": "Veb-sahifalarning semantik tuzilmasi.",
   "about.s2.desc": "Maket, animatsiya va moslashuvchan dizayn.",
   "about.s3.desc": "Interaktivlik va sahifa mantig'i.",
@@ -41,8 +41,8 @@ window.translations.uz = {
   "about.s5.desc": "Saytlarni internetga joylashtirish.",
   "about.journey": "Mening yo'lim",
   "about.j1.text": "HTML, CSS va JavaScript yordamida shaxsiy portfolioimni yaratishni boshladim.",
-  "about.j2.year": "Yil",
-  "about.j2.text": "Bu yerga keyingi yutug'ingizni qo'shing.",
+  "about.j2.year": "2024",
+  "about.j2.text": "Universitetda «Dasturiy injiniring» yo'nalishida o'qishni boshladim.",
 
   "skills.title": "Ko'nikmalar",
 
@@ -51,9 +51,9 @@ window.translations.uz = {
   "resume.view": "PDF'ni ko'rish",
   "resume.download": "Yuklab olish",
   "resume.education": "Ta'lim",
-  "resume.edu1.year": "2024 — hozirgacha",
-  "resume.edu1.title": "Universitet / kollej nomi",
-  "resume.edu1.text": "Sizning ta'lim yo'nalishingiz.",
+  "resume.edu1.year": "2024 — 2028",
+  "resume.edu1.title": "I. Arabayev nomidagi Qirg'iz davlat universiteti, Bishkek",
+  "resume.edu1.text": "Yo'nalish: Dasturiy injiniring",
   "resume.experience": "Tajriba",
   "resume.exp1.text": "Portfolioimni HTML, CSS va JavaScript yordamida loyihalab yaratdim.",
   "resume.certificates": "Sertifikatlar",
@@ -77,8 +77,7 @@ window.translations.uz = {
   "form.err.email": "To'g'ri email manzilini kiriting.",
   "form.err.subject": "Mavzuni kiriting (kamida 3 ta belgi).",
   "form.err.message": "Xabar kamida 10 ta belgidan iborat bo'lishi kerak.",
-  "form.ok": "Forma to'g'ri to'ldirildi. Yuborish keyingi bosqichda qo'shiladi.",
-   "form.sending": "Yuborilmoqda...",
+  "form.sending": "Yuborilmoqda...",
   "form.success": "Rahmat! Xabaringiz yuborildi.",
-  "form.fail": "Nimadir xato ketdi. Keyinroq qayta urinib ko'ring yoki Telegram orqali yozing." 
+  "form.fail": "Nimadir xato ketdi. Keyinroq qayta urinib ko'ring yoki Telegram orqali yozing."
 };

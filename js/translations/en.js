@@ -32,8 +32,8 @@ window.translations.en = {
   "projects.demo": "Live Demo",
 
   "about.title": "About me",
-  "about.p1": "I am a frontend developer who enjoys turning ideas into clean and responsive websites. Write a few sentences about yourself here.",
-  "about.p2": "I am learning and building with HTML, CSS and JavaScript, and I want to grow into a professional developer.",
+  "about.p1": "I am a Software Engineering student at Kyrgyz State University named after I. Arabaev in Bishkek, learning frontend development. I enjoy turning ideas into clean and responsive websites.",
+  "about.p2": "I build projects with HTML, CSS and JavaScript, and I want to grow into a professional developer.",
   "about.s1.desc": "Semantic structure of web pages.",
   "about.s2.desc": "Layout, animation and responsive design.",
   "about.s3.desc": "Interactivity and page logic.",
@@ -41,8 +41,8 @@ window.translations.en = {
   "about.s5.desc": "Deploying websites online.",
   "about.journey": "My Journey",
   "about.j1.text": "Started building my personal portfolio with HTML, CSS and JavaScript.",
-  "about.j2.year": "Year",
-  "about.j2.text": "Add your next milestone here.",
+  "about.j2.year": "2024",
+  "about.j2.text": "Started studying Software Engineering at university.",
 
   "skills.title": "Skills",
 
@@ -51,9 +51,9 @@ window.translations.en = {
   "resume.view": "View PDF",
   "resume.download": "Download",
   "resume.education": "Education",
-  "resume.edu1.year": "2024 — Present",
-  "resume.edu1.title": "University / College name",
-  "resume.edu1.text": "Your field of study.",
+  "resume.edu1.year": "2024 — 2028",
+  "resume.edu1.title": "Kyrgyz State University named after I. Arabaev, Bishkek",
+  "resume.edu1.text": "Field of study: Software Engineering",
   "resume.experience": "Experience",
   "resume.exp1.text": "Designed and built my portfolio with HTML, CSS and JavaScript.",
   "resume.certificates": "Certificates",
@@ -77,8 +77,7 @@ window.translations.en = {
   "form.err.email": "Please enter a valid email address.",
   "form.err.subject": "Please enter a subject (at least 3 characters).",
   "form.err.message": "Message must be at least 10 characters long.",
-  "form.ok": "Form is valid. Sending will be added in the next step.",
-   "form.sending": "Sending...",
+  "form.sending": "Sending...",
   "form.success": "Thank you! Your message has been sent.",
   "form.fail": "Something went wrong. Please try again later or contact me on Telegram."
 };
